@@ -88,8 +88,8 @@ jobs:
         working-directory: sdk/src/client/bindings/nodejs/
         run: npm test
 
-  lint:
-    name: Lint
+  lint-and-format:
+    name: Lint and Check Format
     if: ${{ ! github.event.schedule }}
     runs-on: ubuntu-latest
 
@@ -102,7 +102,7 @@ jobs:
         with:
           cache: npm
           cache-dependency-path: sdk/src/client/bindings/nodejs/package-lock.json
-          node-version: 16.x
+          node-version: "18"
 
       - name: Install Dependencies
         working-directory: sdk/src/client/bindings/nodejs/
@@ -111,26 +111,6 @@ jobs:
       - name: Lint
         working-directory: sdk/src/client/bindings/nodejs/
         run: npm run lint
-
-  check-format:
-    name: Check Format
-    if: ${{ ! github.event.schedule }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout the Source Code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          cache-dependency-path: sdk/src/client/bindings/nodejs/package-lock.json
-          node-version: 16.x
-
-      - name: Install Dependencies
-        working-directory: sdk/src/client/bindings/nodejs/
-        run: npm ci --ignore-scripts
 
       - name: Format
         working-directory: sdk/src/client/bindings/nodejs/
