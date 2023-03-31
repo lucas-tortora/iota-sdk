@@ -80,10 +80,6 @@ jobs:
         working-directory: sdk/src/client/bindings/nodejs/
         run: npm ci --build-from-source
 
-      - name: Run NPM Rebuild
-        working-directory: sdk/src/client/bindings/nodejs/
-        run: npm rebuild
-
       - name: Run NPM Test
         working-directory: sdk/src/client/bindings/nodejs/
         run: npm test
