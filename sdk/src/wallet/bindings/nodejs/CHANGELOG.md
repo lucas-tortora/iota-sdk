@@ -1,5 +1,15 @@
 # Changelog
 
+## \[2.0.3-rc.33]
+
+- Rename `SendNativeTokens::addresses_native_tokens` to `addresses_and_native_tokens`.
+  - [2f35b8d](https://github.com/iotaledger/iota-sdk/commit/2f35b8dbbb10f139e3e765db07c25a51717a37ee) Allow 2 retries for tests ([#334](https://github.com/iotaledger/iota-sdk/pull/334)) on 2023-04-25
+- Remove `AddressGenerationOptions` in favor of `GenerateAddressOptions`, which now contains the `internal` flag.
+  - [2f35b8d](https://github.com/iotaledger/iota-sdk/commit/2f35b8dbbb10f139e3e765db07c25a51717a37ee) Allow 2 retries for tests ([#334](https://github.com/iotaledger/iota-sdk/pull/334)) on 2023-04-25
+- Add EventStatus enum.
+  ParticipationEventStatus::status is now `EventStatus` instead of `string`.
+  - [2f35b8d](https://github.com/iotaledger/iota-sdk/commit/2f35b8dbbb10f139e3e765db07c25a51717a37ee) Allow 2 retries for tests ([#334](https://github.com/iotaledger/iota-sdk/pull/334)) on 2023-04-25
+
 ## \[2.0.3-rc.32]
 
 - Add `BaseCoinBalance.voting_power` field.
