@@ -232,3 +232,4 @@ Before contributing, please read and adhere to the [code of conduct](/.github/CO
 
 The IOTA SDK is open-source software licensed under Apache License 2.0. For more information, please read
 the [LICENSE](/LICENSE).
+
