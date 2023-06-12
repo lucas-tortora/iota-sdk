@@ -13,6 +13,7 @@
     - [`install`](#npm-install-or-yarn-install)
     - [`build`](#npm-build-or-yarn-build)
     - [`test`](#npm-test-or-yarn-test)
+- [Important Files and Directories](#important-files-and-directories)
     - [Cargo.toml](#cargotoml)
     - [README.md](#readmemd)
     - [index.node](#indexnode)
